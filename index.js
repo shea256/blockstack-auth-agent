@@ -1,6 +1,8 @@
 'use strict'
 
-var PrivateKeychain = require('keychain-manager').PrivateKeychain
+var PrivateKeychain = require('keychain-manager').PrivateKeychain,
+    decodeToken = require('jwt-js').decodeToken,
+    AuthResponse = require('blockchain-auth').AuthResponse
 
 function BlockchainAuthAgent(privateKeychain, document) {
     if (!(privateKeychain instanceof PrivateKeychain)) {
