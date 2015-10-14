@@ -15,6 +15,9 @@ npm install blockchain-auth-agent
 ### Logging In
 
 ```js
+var BlockchainAuthAgent = require('blockchain-auth-agent'),
+    PrivateKeychain = require('keychain-manager').PrivateKeychain
+
 var privateKeychain = new PrivateKeychain()
 var blockchainAuthAgent = new BlockchainAuthAgent(privateKeychain, document);
 if (blockchainAuthAgent.loginOptionPresent()) {
